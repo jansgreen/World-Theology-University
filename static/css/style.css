@@ -1,0 +1,106 @@
+:root {
+    --wtu-blue: #0057B8;
+    --wtu-dark-blue: #003875;
+    --wtu-light-blue: #1E90FF;
+    --wtu-light-gray: #F4F6F9;
+    --wtu-white: #FFFFFF;
+}
+
+body {
+    background: var(--wtu-light-gray);
+    color: var(--wtu-dark-blue);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+/* Background utilities */
+.bg-wtu-blue { background-color: var(--wtu-blue) !important; }
+.bg-wtu-dark { background-color: var(--wtu-dark-blue) !important; }
+.bg-wtu-light { background-color: var(--wtu-light-blue) !important; }
+
+/* Text color utilities */
+.text-wtu-blue { color: var(--wtu-blue) !important; }
+.text-wtu-dark { color: var(--wtu-dark-blue) !important; }
+.text-wtu-light { color: var(--wtu-light-blue) !important; }
+
+/* Shadows and cards */
+.shadow-soft { box-shadow: 0 4px 24px rgba(0,87,184,0.08); }
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 32px rgba(0,87,184,0.18);
+    transform: translateY(-6px) scale(1.03);
+}
+.card-title { min-height: 3rem; }
+.card .badge { font-size: 0.95em; }
+
+@media (max-width: 767px) {
+    .card-title { min-height: unset; }
+}
+
+/* Buttons */
+.btn-wtu {
+    background: var(--wtu-blue);
+    color: var(--wtu-white);
+    border-radius: 2rem;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.btn-wtu:hover {
+    background: var(--wtu-dark-blue);
+    box-shadow: 0 4px 16px rgba(0,87,184,0.15);
+    color: var(--wtu-white);
+    transform: scale(1.05);
+}
+
+/* Animaciones suaves */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 0.8s, transform 0.8s;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Efecto overlay en hero */
+.hero-overlay {
+    background: linear-gradient(120deg, rgba(0,87,184,0.85) 60%, rgba(30,144,255,0.7) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+/* Efecto hover en enlaces footer */
+footer a.text-white:hover {
+    color: var(--wtu-light-blue) !important;
+    text-decoration: underline;
+}
+
+/* Imagenes de tarjetas blog */
+.card-img-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    object-fit: cover;
+    height: 180px;
+    transition: filter 0.3s;
+}
+.card:hover .card-img-top {
+    filter: brightness(0.95) saturate(1.1);
+}
+
+/* Testimonios */
+.card blockquote {
+    font-size: 1.1rem;
+    color: var(--wtu-dark-blue);
+    font-style: italic;
+}
+.card .blockquote-footer {
+    color: var(--wtu-blue);
+}
