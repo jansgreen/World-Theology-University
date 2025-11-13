@@ -40,10 +40,8 @@ if (document.getElementById('langSwitch')) {
                                 feat1desc: 'Profesores con experiencia global y excelencia académica.',
                                 feat2: 'Modalidad Flexible',
                                 feat2desc: 'Estudia online, presencial o híbrido según tus necesidades.',
-                                feat3: 'Acreditación Internacional',
-                                feat3desc: 'Programas reconocidos y validados a nivel mundial.',
-                                feat4: 'Enfoque en Liderazgo',
-                                feat4desc: 'Desarrolla habilidades para liderar y servir en cualquier contexto.',
+                                feat3: 'Enfoque en Liderazgo',
+                                feat3desc: 'Desarrolla habilidades para liderar y servir en cualquier contexto.',
                                 blog: 'Noticias y Actualidad',
                                 blog1: 'WTU inaugura nuevo campus virtual',
                                 blog1desc: 'Descubre las ventajas de nuestra nueva plataforma de aprendizaje online.',
@@ -78,10 +76,8 @@ if (document.getElementById('langSwitch')) {
                                 feat1desc: 'Professors with global experience and academic excellence.',
                                 feat2: 'Flexible Modality',
                                 feat2desc: 'Study online, in-person, or hybrid as you need.',
-                                feat3: 'International Accreditation',
-                                feat3desc: 'Programs recognized and validated worldwide.',
-                                feat4: 'Leadership Focus',
-                                feat4desc: 'Develop skills to lead and serve in any context.',
+                                feat3: 'Leadership Focus',
+                                feat3desc: 'Develop skills to lead and serve in any context.',
                                 blog: 'News & Updates',
                                 blog1: 'WTU launches new virtual campus',
                                 blog1desc: 'Discover the advantages of our new online learning platform.',
@@ -319,8 +315,6 @@ if (document.getElementById('langSwitch')) {
                         document.querySelectorAll('#features .small')[1].innerText = t.feat2desc;
                         document.querySelectorAll('#features .fw-bold')[2].innerText = t.feat3;
                         document.querySelectorAll('#features .small')[2].innerText = t.feat3desc;
-                        document.querySelectorAll('#features .fw-bold')[3].innerText = t.feat4;
-                        document.querySelectorAll('#features .small')[3].innerText = t.feat4desc;
                         // Blog
                         document.querySelector('#blog h2').innerText = t.blog;
                         document.querySelectorAll('#blog .fw-bold')[0].innerText = t.blog1;
