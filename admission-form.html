@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Application Form – World Theology University</title>
+    <link href="static/bootstrap/bootstrap-5.2.3-examples/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Header and Navbar -->
+    <header class="bg-wtu-blue shadow-soft">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-wtu-blue container">
+            <button id="langSwitch" class="btn btn-link link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold" style="text-decoration:none;" onclick="toggleLanguage()">English</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#programas">Programas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#features">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#blog">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#testimonios">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses-certificates.html">Courses & Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="admission.html">Admission</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="position-relative overflow-hidden bg-wtu-dark" style="min-height: 30vh;">
+        <div class="container position-relative z-3 d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 30vh;">
+            <h1 class="display-5 fw-bold text-white mb-3 fade-in">Admission Application Form – Download</h1>
+            <p class="lead text-wtu-light mb-4 fade-in">Review the form fields below and download the official PDF to complete your application.</p>
+        </div>
+    </section>
+
+    <!-- Form Preview Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Download Button (Top) -->
+                    <div class="text-center mb-5 fade-in">
+                        <a href="static/docs/WTU Admission Application Form.pdf" download class="btn btn-wtu btn-lg shadow-soft px-5 py-3">
+                            <i class="fas fa-file-pdf fa-2x me-3"></i>
+                            <span class="fs-4 fw-bold">DOWNLOAD PDF FORM</span>
+                        </a>
+                        <p class="text-muted mt-3 small">Click above to download the official Admission Application Form in PDF format.</p>
+                    </div>
+
+                    <!-- Form Preview Card -->
+                    <div class="card shadow-soft mb-5 fade-in">
+                        <div class="card-header bg-wtu-blue text-white text-center py-4">
+                            <h2 class="fw-bold mb-0">WORLD THEOLOGY UNIVERSITY</h2>
+                            <h4 class="mt-2">ADMISSION APPLICATION FORM</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- Applicant Information -->
+                            <h5 class="text-wtu-blue fw-bold mb-4 border-bottom pb-2"><i class="fas fa-user me-2"></i>APPLICANT INFORMATION</h5>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Full Legal Name</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Preferred Name</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold">Birth Date (mm/dd/yyyy)</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold">Gender</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold">Phone (Home/Cell)</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Email Address</label>
+                                    <input type="email" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">SSN</label>
+                                    <input type="number" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label fw-bold">Permanent Address</label>
+                                    <textarea class="form-control" rows="2" disabled></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label fw-bold">Current Mailing Address (if different)</label>
+                                    <textarea class="form-control" rows="2" disabled></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Admission Details -->
+                            <h5 class="text-wtu-blue fw-bold mb-4 border-bottom pb-2 mt-5"><i class="fas fa-graduation-cap me-2"></i>ADMISSION DETAILS</h5>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Entry Term (Spring/Fall)</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Academic Interests</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label fw-bold">Career Interest</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Do you intend to apply for financial aid?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" disabled>
+                                        <label class="form-check-label">Yes / No</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Do you intend to apply for merit-based scholarships?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" disabled>
+                                        <label class="form-check-label">Yes / No</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Do you intend to be a full-time student?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" disabled>
+                                        <label class="form-check-label">Yes / No</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Do you intend to enroll in a degree program your first year?</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" disabled>
+                                        <label class="form-check-label">Yes / No</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Demographics -->
+                            <h5 class="text-wtu-blue fw-bold mb-4 border-bottom pb-2 mt-5"><i class="fas fa-globe me-2"></i>DEMOGRAPHICS</h5>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Citizenship Status</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Non-US Citizenship(s)</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label fw-bold">Birthplace (City/State/Country)</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Years lived in the US</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Years lived outside the US</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label fw-bold">Language Proficiency (Speak/Read/Write/First Language/Speak at Home)</label>
+                                    <textarea class="form-control" rows="3" disabled></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Ethnic Background</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Religion (Optional)</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                            </div>
+
+                            <!-- Signature -->
+                            <h5 class="text-wtu-blue fw-bold mb-4 border-bottom pb-2 mt-5"><i class="fas fa-signature me-2"></i>SIGNATURE</h5>
+                            <div class="alert alert-info mb-4" role="alert">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <strong>Certification:</strong> "I certify that the information provided is accurate."
+                            </div>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-8">
+                                    <label class="form-label fw-bold">Applicant Signature</label>
+                                    <input type="text" class="form-control" disabled placeholder="__________________________">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold">Date</label>
+                                    <input type="text" class="form-control" disabled placeholder="_______________">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download Button (Bottom) -->
+                    <div class="text-center mb-5 fade-in">
+                        <a href="static/docs/WTU Admission Application Form.pdf" download class="btn btn-wtu btn-lg shadow-soft px-5 py-3">
+                            <i class="fas fa-file-pdf fa-2x me-3"></i>
+                            <span class="fs-4 fw-bold">DOWNLOAD PDF FORM</span>
+                        </a>
+                        <p class="text-muted mt-3">After downloading, please fill out the form completely and upload it below.</p>
+                    </div>
+
+                    <!-- Upload Section -->
+                    <div class="card shadow-soft mb-5 fade-in border-success">
+                        <div class="card-body p-5 text-center">
+                            <div class="mb-4">
+                                <i class="fas fa-cloud-upload-alt fa-4x text-success"></i>
+                            </div>
+                            <h4 class="fw-bold text-wtu-blue mb-3">Ready to Submit Your Completed Form?</h4>
+                            <p class="text-muted mb-4">Once you've downloaded and completed the PDF form, click the button below to upload it through our Google Form.</p>
+                            <a href="https://docs.google.com/forms/d/1SPyUp9PVm0xd6l-xjmUbEpd4Nn51OT93ZyGzLDdFdiQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg shadow-soft px-5 py-3">
+                                <i class="fas fa-upload fa-lg me-3"></i>
+                                <span class="fs-5 fw-bold">UPLOAD COMPLETED FORM</span>
+                            </a>
+                            <p class="text-muted mt-3 small"><i class="fas fa-info-circle me-1"></i>You will be redirected to Google Forms to submit your application.</p>
+                            
+                            <!-- Alternative: Email Submission -->
+                            <div class="mt-5 pt-4 border-top">
+                                <h5 class="fw-bold text-wtu-blue mb-3"><i class="fas fa-envelope me-2"></i>Alternative Option: Send by Email</h5>
+                                <p class="text-muted mb-4">If you prefer, you can also send your completed form directly to our admissions email:</p>
+                                <a href="mailto:worlduniversitytheology@gmail.com?subject=Admission%20Application%20Form%20-%20[Your%20Full%20Name]&body=Dear%20Admissions%20Team,%0D%0A%0D%0APlease%20find%20attached%20my%20completed%20Admission%20Application%20Form.%0D%0A%0D%0AThank%20you." class="btn btn-outline-wtu btn-lg px-4 py-3">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    Send via Email: worlduniversitytheology@gmail.com
+                                </a>
+                                <p class="text-muted mt-3 small"><i class="fas fa-paperclip me-1"></i>Don't forget to attach your completed PDF form to the email.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Back to Admission -->
+                    <div class="text-center fade-in">
+                        <a href="admission.html" class="btn btn-outline-secondary"><i class="fas fa-arrow-left me-2"></i>Back to Admission Process</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-wtu-blue text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
+                    <small class="fw-bold fs-5">Síguenos en</small>
+                    <div class="ms-3">
+                        <a href="https://chat.whatsapp.com/JxFdPTAtVWjI3HvfJqpjxN" target="_blank" rel="noopener" class="text-white me-2" title="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583647672801" target="_blank" rel="noopener" class="text-white me-2" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="https://x.com/worldtheology47?t=abYk5ihWxo4WUFtMr9aVzg&s=09" target="_blank" rel="noopener" class="text-white me-2" title="X"><i class="fab fa-x-twitter fa-lg"></i></a>
+                        <a href="https://www.instagram.com/worlduniversitytheology/" target="_blank" rel="noopener" class="text-white" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="index.html" class="text-white text-decoration-none me-3">Home</a>
+                    <a href="index.html#programas" class="text-white text-decoration-none me-3">Programs</a>
+                    <a href="index.html#features" class="text-white text-decoration-none me-3">Benefits</a>
+                    <a href="index.html#blog" class="text-white text-decoration-none me-3">News</a>
+                    <a href="index.html#contacto" class="text-white text-decoration-none me-3">Contact</a>
+                    <a href="courses-certificates.html" class="text-white text-decoration-none me-3">Courses & Certificates</a>
+                    <a href="admission.html" class="text-white text-decoration-none">Admission</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center small">
+                    &copy; 2025 World Theology University. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/bootstrap/bootstrap-5.2.3-examples/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="static/js/script.js"></script>
+</body>
+</html>

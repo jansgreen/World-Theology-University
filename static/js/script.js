@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         fadeEls.forEach(el => observer.observe(el));
 });
 
-// Traducción dinámica para index.html y courses-certificates.html
+// Traducción dinámica para index.html, courses-certificates.html y admission.html
 if (document.getElementById('langSwitch')) {
         // Detectar página y definir traducciones
         let translations = {};
@@ -24,7 +24,7 @@ if (document.getElementById('langSwitch')) {
                         es: {
                                 lang: 'Español',
                                 switch: 'English',
-                                nav: ['Inicio', 'Programas', 'Beneficios', 'Noticias', 'Testimonios', 'Contacto'],
+                                nav: ['Inicio', 'Programas', 'Beneficios', 'Noticias', 'Testimonios', 'Contacto', 'Courses & Certificates', 'Admission'],
                                 heroTitle: 'World Theology University',
                                 heroSubtitle: 'Formando líderes con visión global y fundamento teológico sólido.',
                                 heroBtn: 'Descubre nuestros programas',
@@ -60,7 +60,7 @@ if (document.getElementById('langSwitch')) {
                         en: {
                                 lang: 'English',
                                 switch: 'Español',
-                                nav: ['Home', 'Programs', 'Benefits', 'News', 'Testimonials', 'Contact'],
+                                nav: ['Home', 'Programs', 'Benefits', 'News', 'Testimonials', 'Contact', 'Courses & Certificates', 'Admission'],
                                 heroTitle: 'World Theology University',
                                 heroSubtitle: 'Training leaders with a global vision and solid theological foundation.',
                                 heroBtn: 'Discover our programs',
@@ -95,13 +95,60 @@ if (document.getElementById('langSwitch')) {
                         }
                 };
         } else if (document.querySelector('h1.display-4')) {
-                // courses-certificates.html
-                page = 'courses';
-                translations = {
-                        es: {
-                                lang: 'Español',
-                                switch: 'English',
-                                nav: ['Inicio', 'Programas', 'Beneficios', 'Noticias', 'Testimonios', 'Contacto', 'Courses & Certificates'],
+                // Detectar si es courses-certificates.html o admission.html
+                if (window.location.pathname.includes('admission')) {
+                        // admission.html
+                        page = 'admission';
+                        translations = {
+                                es: {
+                                        lang: 'Español',
+                                        switch: 'English',
+                                        nav: ['Inicio', 'Programas', 'Beneficios', 'Noticias', 'Testimonios', 'Contacto', 'Courses & Certificates', 'Admisión'],
+                                        heroTitle: 'Proceso de Admisión',
+                                        heroSubtitle: 'Sigue los pasos a continuación para completar tu admisión a World Theology University.',
+                                        step1Title: 'Paso 1 — Descarga el Formulario de Admisión',
+                                        step1Desc: 'Para comenzar tu admisión, descarga el formulario oficial de solicitud en PDF. Por favor, llénalo de forma completa y clara.',
+                                        step1Btn: 'Descargar Formulario PDF',
+                                        step2Title: 'Paso 2 — Completa el Formulario',
+                                        step2Desc: 'Completa el formulario con tu información personal, antecedentes académicos y selección de programa.',
+                                        step3Title: 'Paso 3 — Sube el Formulario Completado',
+                                        step3Desc: 'Una vez que hayas completado el formulario, súbelo utilizando el Google Form proporcionado a continuación.',
+                                        step3Btn: 'Subir Formulario Completado (Google Form)',
+                                        notesTitle: 'Notas Importantes',
+                                        notesDesc: 'Asegúrate de que toda la información sea precisa antes de enviar tu formulario. Nuestro equipo de admisiones se pondrá en contacto contigo en un plazo de 3 a 5 días hábiles.',
+                                        ctaTitle: '¿Necesitas Asistencia?',
+                                        ctaDesc: 'Si necesitas asistencia, contacta a nuestra oficina de admisiones en:',
+                                        ctaEmail: 'admissions@worlduniversitytheology.com'
+                                },
+                                en: {
+                                        lang: 'English',
+                                        switch: 'Español',
+                                        nav: ['Home', 'Programs', 'Benefits', 'News', 'Testimonials', 'Contact', 'Courses & Certificates', 'Admission'],
+                                        heroTitle: 'Admission Process',
+                                        heroSubtitle: 'Follow the steps below to complete your admission to World Theology University.',
+                                        step1Title: 'Step 1 — Download the Admission Form',
+                                        step1Desc: 'To begin your admission, download the official PDF application form. Please fill it out completely and clearly.',
+                                        step1Btn: 'Download PDF Application Form',
+                                        step2Title: 'Step 2 — Fill Out the Form',
+                                        step2Desc: 'Complete the form with your personal information, academic background, and program selection.',
+                                        step3Title: 'Step 3 — Upload the Completed Form',
+                                        step3Desc: 'Once you have filled out the form, please upload it using the Google Form provided below.',
+                                        step3Btn: 'Upload Completed Form (Google Form)',
+                                        notesTitle: 'Important Notes',
+                                        notesDesc: 'Ensure all information is accurate before submitting your form. Our admissions team will contact you within 3–5 business days.',
+                                        ctaTitle: 'Need Assistance?',
+                                        ctaDesc: 'If you need assistance, contact our admissions office at:',
+                                        ctaEmail: 'admissions@worlduniversitytheology.com'
+                                }
+                        };
+                } else {
+                        // courses-certificates.html
+                        page = 'courses';
+                        translations = {
+                                es: {
+                                        lang: 'Español',
+                                        switch: 'English',
+                                        nav: ['Inicio', 'Programas', 'Beneficios', 'Noticias', 'Testimonios', 'Contacto', 'Courses & Certificates', 'Admisión'],
                                 heroTitle: 'Courses & Certificates – World Theology University',
                                 heroSubtitle: 'Explora todos nuestros programas, certificados y oportunidades de formación ministerial.',
                                 coursesCatalog: 'Catálogo de Cursos',
@@ -285,6 +332,7 @@ if (document.getElementById('langSwitch')) {
                                 ]
                         }
                 };
+                }
         }
 
         let currentLang = page === 'index' ? 'es' : 'en';
@@ -332,6 +380,25 @@ if (document.getElementById('langSwitch')) {
                         document.querySelectorAll('#testimonios .blockquote-footer')[1].innerText = t.test2footer;
                         // Footer
                         document.querySelector('footer .small').innerHTML = `&copy; 2025 World Theology University. ${t.footer}`;
+                } else if (page === 'admission') {
+                        // Hero
+                        document.querySelector('h1.display-4').innerText = t.heroTitle;
+                        document.querySelector('.lead.text-wtu-light').innerText = t.heroSubtitle;
+                        // Steps
+                        document.querySelectorAll('.card-body h3')[0].innerText = t.step1Title;
+                        document.querySelectorAll('.card-body p')[0].innerText = t.step1Desc;
+                        document.querySelectorAll('.btn-wtu')[0].innerHTML = '<i class="fas fa-download me-2"></i>' + t.step1Btn;
+                        document.querySelectorAll('.card-body h3')[1].innerText = t.step2Title;
+                        document.querySelectorAll('.card-body p')[1].innerText = t.step2Desc;
+                        document.querySelectorAll('.card-body h3')[2].innerText = t.step3Title;
+                        document.querySelectorAll('.card-body p')[2].innerText = t.step3Desc;
+                        document.querySelectorAll('.btn-wtu')[1].innerHTML = '<i class="fas fa-upload me-2"></i>' + t.step3Btn;
+                        // Notes
+                        document.querySelector('.alert h5').innerText = t.notesTitle;
+                        document.querySelector('.alert p').innerText = t.notesDesc;
+                        // CTA
+                        document.querySelector('.bg-wtu-light h4').innerText = t.ctaTitle;
+                        document.querySelectorAll('.bg-wtu-light p')[0].innerText = t.ctaDesc;
                 } else if (page === 'courses') {
                         // Hero
                         document.querySelector('h1.display-4').innerText = t.heroTitle;
